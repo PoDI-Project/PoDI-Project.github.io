@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PoDIChain - Coming Soon</title>
+  <script src="https://cdn.tailwindcss.com "></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .fade-section {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/30 border-b border-gray-800 transition-all duration-300">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text">PoDIChain</h1>
+
+      <!-- Mobile Menu Button -->
+      <button onclick="toggleMenu()" class="md:hidden text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path id="menu-icon-line1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"/>
+          <path id="menu-icon-line2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"/>
+          <path id="menu-icon-line3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-gray-800/90 backdrop-blur-lg p-4 space-y-4">
+      <a href="#overview" onclick="scrollToSection('overview')" class="block capitalize hover:text-blue-400 transition-colors">Overview</a>
+      <a href="#goals" onclick="scrollToSection('goals')" class="block capitalize hover:text-blue-400 transition-colors">Goals</a>
+      <a href="#architecture" onclick="scrollToSection('architecture')" class="block capitalize hover:text-blue-400 transition-colors">Architecture</a>
+      <a href="#technology" onclick="scrollToSection('technology')" class="block capitalize hover:text-blue-400 transition-colors">Technology</a>
+      <a href="#why" onclick="scrollToSection('why')" class="block capitalize hover:text-blue-400 transition-colors">Why PoDIChain</a>
+      <a href="#license" onclick="scrollToSection('license')" class="block capitalize hover:text-blue-400 transition-colors">License</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-4 container mx-auto text-center">
+    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+      🧠 PoDIChain — Proof of Deterministic Integrity Blockchain
+    </h2>
+    <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+      Transforming pointless mining into provably useful computation.
+    </p>
+    <div class="mt-10">
+      <span class="inline-block bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm uppercase tracking-wider">
+        Coming Soon
+      </span>
+    </div>
+  </section>
+
+  <main class="container mx-auto px-4 pb-20 space-y-32">
+    
+    <!-- Overview -->
+    <section id="overview" class="fade-section">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">🌍 Overview</h3>
+        <p class="text-lg text-gray-300 mb-6">
+          PoDIChain is a next-generation cryptocurrency platform that eliminates wasteful, energy-intensive mining and replaces it with a zero-trust, cryptographically verifiable system of useful work. Instead of solving meaningless hash puzzles, participants execute and validate real-world computational tasks that benefit science, machine learning, simulation, and AI model validation — all while securing a decentralized ledger.
+        </p>
+        <p class="text-lg text-gray-300">
+          PoDIChain introduces a novel consensus mechanism: <strong>Proof of Deterministic Integrity (PoDI)</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Goals -->
+    <section id="goals" class="fade-section">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-3xl font-bold mb-6 bg-gradient-to-r from-green-400 to-teal-500 text-transparent bg-clip-text">🎯 Project Goals</h3>
+        <ul class="space-y-4 text-lg text-gray-300 list-disc pl-6">
+          <li>Eliminate artificial Proof-of-Work mining.</li>
+          <li>Replace it with real, deterministic, useful computation.</li>
+          <li>Enable zero-trust verification via cryptographic audit trails.</li>
+          <li>Incentivize a global marketplace for computing real-world problems.</li>
+          <li>Allow anyone to submit provable, deterministic compute bounties.</li>
+          <li>Enable decentralized governance over compute priorities and tasks.</li>
+          <li>Bridge verified results to other chains via secure interoperability.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section id="architecture" class="fade-section">
+      <div class="max-w-5xl mx-auto">
+        <h3 class="text-3xl font-bold mb-8 bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text">🏗️ Architecture</h3>
+
+        <!-- Core Modules Table -->
+        <div class="overflow-x-auto bg-gray-800/50 rounded-lg shadow-lg border border-gray-700 mb-10">
+          <table class="w-full table-auto">
+            <thead class="bg-gray-900">
+              <tr>
+                <th class="px-6 py-3 text-left text-sm font-semibold text-blue-400">Module</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold text-blue-400">Description</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-700">
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Task Engine</td>
+                <td class="px-6 py-4 text-sm text-gray-300">Manages task creation, metadata, and reward posting.</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Worker Node</td>
+                <td class="px-6 py-4 text-sm text-gray-300">Executes deterministic tasks and produces verifiable output + logs.</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Trace Logger</td>
+                <td class="px-6 py-4 text-sm text-gray-300">Records every step of computation into a Merkle tree.</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Verifier Pool</td>
+                <td class="px-6 py-4 text-sm text-gray-300">Randomly validates submitted output using challenge-response auditing.</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Slashing Engine</td>
+                <td class="px-6 py-4 text-sm text-gray-300">Automatically penalizes dishonest workers or fraudulent submissions.</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Consensus Layer</td>
+                <td class="px-6 py-4 text-sm text-gray-300">Hybrid DPoS + PoDI consensus for secure and fair block production.</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Ledger Chain</td>
+                <td class="px-6 py-4 text-sm text-gray-300">Immutable storage of results, transaction records, and fraud proofs.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Extended Features -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all transform hover:-translate-y-1">
+            <h4 class="text-xl font-semibold mb-3 flex items-center">
+              🔨 Open Compute Bounty Market
+            </h4>
+            <p class="text-gray-300">Any user can post useful tasks (e.g., FFT, bioinformatics, model evaluation). These are escrowed and rewarded based on verifiably correct computation.</p>
+          </div>
+          <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all transform hover:-translate-y-1">
+            <h4 class="text-xl font-semibold mb-3 flex items-center">
+              🤖 Proof-of-Model Evaluation
+            </h4>
+            <p class="text-gray-300">Submit machine learning models for deterministic inference and scoring. Workers execute and return validated performance metrics with output hashes.</p>
+          </div>
+          <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all transform hover:-translate-y-1">
+            <h4 class="text-xl font-semibold mb-3 flex items-center">
+              🔗 Layer-2 Bridges
+            </h4>
+            <p class="text-gray-300">Push verified outputs to external blockchains like Ethereum, Arbitrum, or Optimism using zk-bridges or optimistic fraud-proof rollups.</p>
+          </div>
+          <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition-all transform hover:-translate-y-1">
+            <h4 class="text-xl font-semibold mb-3 flex items-center">
+              🗳️ Task DAOs (Decentralized Governance)
+            </h4>
+            <p class="text-gray-300">Govern compute priorities by stake-weighted DAO voting per domain (e.g., climate modeling, health, AI safety). DAO rules enforce budgeting and task approval.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section id="technology" class="fade-section">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-3xl font-bold mb-8 bg-gradient-to-r from-indigo-400 to-violet-500 text-transparent bg-clip-text">🧪 Technology Stack</h3>
+        <div class="overflow-x-auto bg-gray-800/50 rounded-lg shadow-lg border border-gray-700">
+          <table class="w-full table-auto">
+            <thead class="bg-gray-900">
+              <tr>
+                <th class="px-6 py-3 text-left text-sm font-semibold text-blue-400">Layer</th>
+                <th class="px-6 py-3 text-left text-sm font-semibold text-blue-400">Technology</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-700">
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Core Language</td>
+                <td class="px-6 py-4 text-sm text-gray-300">Rust or Go</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Blockchain Layer</td>
+                <td class="px-6 py-4 text-sm text-gray-300">Substrate (Rust) / Cosmos SDK (Go)</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Smart Contracts</td>
+                <td class="px-6 py-4 text-sm text-gray-300">Solidity / CosmWasm</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">ZK Proofs</td>
+                <td class="px-6 py-4 text-sm text-gray-300">Circom / zkLLVM / RISC Zero</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Task Execution</td>
+                <td class="px-6 py-4 text-sm text-gray-300">WebAssembly (WASM) or eBPF sandbox</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Merkle Structures</td>
+                <td class="px-6 py-4 text-sm text-gray-300">SHA-3 or Blake3</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Storage Layer</td>
+                <td class="px-6 py-4 text-sm text-gray-300">IPFS / Arweave for datasets</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Off-chain DB</td>
+                <td class="px-6 py-4 text-sm text-gray-300">RocksDB / PostgreSQL</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Bridge Layer</td>
+                <td class="px-6 py-4 text-sm text-gray-300">zkBridge / Optimistic Rollups</td>
+              </tr>
+              <tr class="hover:bg-gray-800 transition-colors group">
+                <td class="px-6 py-4 text-sm font-medium text-white group-hover:text-blue-400">Frontend</td>
+                <td class="px-6 py-4 text-sm text-gray-300">Svelte / Next.js for dashboard</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why PoDIChain -->
+    <section id="why" class="fade-section">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-3xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-500 text-transparent bg-clip-text">🌐 Why PoDIChain?</h3>
+        <p class="text-lg text-gray-300 mb-6">
+          Traditional blockchains like Bitcoin and Ethereum (PoW) waste immense computational power on brute-force hashing. PoDIChain solves this by ensuring that:
+        </p>
+        <ul class="space-y-4 text-lg text-gray-300 list-disc pl-6">
+          <li>All mining power is directed toward solving scientifically, economically, or socially valuable problems.</li>
+          <li>All results are deterministic, verifiable, and reproducible.</li>
+          <li>No output is accepted without mathematical proof of integrity.</li>
+          <li>The system is secure, fair, decentralized, and extensible.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- License -->
+    <section id="license" class="fade-section">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-3xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-rose-500 text-transparent bg-clip-text">📄 License</h3>
+        <p class="text-lg text-gray-300">
+          PoDIChain is released under the <a href="./LICENSE" class="text-blue-400 hover:underline">MIT License</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-10 px-4 bg-gray-800/50 border-t border-gray-700 text-center text-gray-400">
+    <p>© 2025 PoDIChain — Powered by Useful Computation</p>
+    <p class="mt-2 text-sm">Join the mission to make blockchain matter.</p>
+  </footer>
+
+  <!-- JS Script -->
+  <script>
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        history.pushState(null, '', '#' + id);
+      }
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const iconLines = document.querySelectorAll('#menu-icon-line1, #menu-icon-line2, #menu-icon-line3');
+      menu.classList.toggle('hidden');
+      iconLines.forEach(line => {
+        line.setAttribute('d', line.getAttribute('d') === 'M4 6h16' ? 'M6 18L18 6' : 'M4 6h16');
+        line.setAttribute('d', line.getAttribute('d') === 'M4 12h16' ? 'M6 6l12 12' : 'M4 12h16');
+        line.setAttribute('d', line.getAttribute('d') === 'M4 18h16' ? 'M6 6l12 12' : 'M4 18h16');
+      });
+    }
+
+    // Animate sections on scroll
+    const sections = document.querySelectorAll('.fade-section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.style.animation = 'fadeInUp 1s ease forwards';
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
